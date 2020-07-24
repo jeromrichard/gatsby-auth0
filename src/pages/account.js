@@ -21,7 +21,7 @@ const Account = () => {
   return (
     <>
       <nav>
-        <Link to="/account">Home</Link>{" "}
+        <Link to="/">Home</Link>{" "}
         <Link to="/account/settings">Settings</Link>{" "}
         <Link to="/Menu/">Collaborateurs</Link>{" "}
         <a
