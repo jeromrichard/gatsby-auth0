@@ -13,7 +13,7 @@ const auth = isBrowser
       scope: "openid profile email",
     })
   : {}
-
+  
 const tokens = {
   accessToken: false,
   idToken: false,
