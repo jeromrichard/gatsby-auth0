@@ -3,10 +3,8 @@ import { Router } from "@reach/router"
 import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
 import { Link } from "gatsby"
 
-
-const Home = ({ user }) => {
-  return <p>Hi, {user.name ? user.name : "friend"}!</p>
-}
+const Home = () => <p>Home</p>
+const MyAccount = () => <p>My Account</p>
 const Settings = () => <p>Settings</p>
 const Billing = () => <p>Billing</p>
 
@@ -22,8 +20,9 @@ const Account = () => {
     <>
       <nav>
         <Link to="/">Home</Link>{" "}
-        <Link to="/account/settings">Settings</Link>{" "}
-        <Link to="/Menu/">Collaborateurs</Link>{" "}
+        <Link to="/account/">My Account</Link>{" "}
+        <Link to="/account/settings/">Settings</Link>{" "}
+        <Link to="/Menu/">Collaborateur</Link>{" "}
         <a
           href="#logout"
           onClick={e => {
@@ -34,8 +33,10 @@ const Account = () => {
           Log Out
         </a>
       </nav>
+      <pre>{JSON.stringify(user, null, 2)}</pre>
       <Router>
-        <Home path="/account" user={user} />
+        <Home path="/" />
+        <MyAccount path="/account/" />
         <Settings path="/account/settings" />
         <Billing path="/Menu/" />
       </Router>
