@@ -18,7 +18,7 @@ const IndexPage = () => (
     </div>
     
   
-    <Link to="/account/">Go to your account</Link> <br />
+    <Link to="/account">Go to your account</Link> <br />
     
   </Layout>
 )
